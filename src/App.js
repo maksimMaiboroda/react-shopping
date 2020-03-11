@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { connect } from "react-redux";
+import { setBooks } from "./actions/boks";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    const { books } = this.props.books;
+    const { setBooks } = this.props;
+    const newBooks = [
+      {
+        id: 0,
+        title: "Shopping Cart -" + new Date()
+      }
+    ]
+
+    return (
+      <div>
+        <div> {books[0].title}</div>
+        <button onClick={setBooks.bind(this, newBooks)}>change</button>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  ...state
+});
+
+export default connect(mapStateToProps, { setBooks })(App);
