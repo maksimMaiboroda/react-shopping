@@ -6,7 +6,7 @@ import styles from "./App.module.css"
 import { Container, Card } from "semantic-ui-react";
 import MenuComponent from "../MenuComponent/MenuComponent";
 import BookCard from "../BookCard/BookCard";
-import Filter from "../Filter/Filter";
+import Filter from "../../containers/Filter";
 
 class App extends React.Component {
   componentWillMount() {

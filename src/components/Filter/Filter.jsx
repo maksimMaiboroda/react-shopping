@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Menu } from "semantic-ui-react";
+import { Input, Menu } from "semantic-ui-react";
 
-const Filter = ({ filterBy, setFilter }) => {
+const Filter = ({ filterBy, setFilter, searchQuery, setSearchQuery }) => {
   return (
     <Menu secondary>
       <Menu.Item
@@ -30,6 +30,15 @@ const Filter = ({ filterBy, setFilter }) => {
         onClick={setFilter.bind(this, "author")}
       >
         Автор
+      </Menu.Item>
+
+      <Menu.Item>
+        <Input
+          icon="search"
+          onChange={e => setSearchQuery(e.target.value)}
+          value={searchQuery}
+          placeholder="Поиск по книгам..."
+        />
       </Menu.Item>
     </Menu>
   );
