@@ -4,8 +4,8 @@ import axios from "axios";
 import styles from "./App.module.css"
 
 import { Container, Card } from "semantic-ui-react";
-import MenuComponent from "../MenuComponent/MenuComponent";
-import BookCard from "../BookCard/BookCard";
+import MenuComponent from "../../containers/MenuComponent";
+import BookCard from "../../containers/BookCard";
 import Filter from "../../containers/Filter";
 
 class App extends React.Component {

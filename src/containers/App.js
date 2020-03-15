@@ -17,6 +17,9 @@ const sortBy = (books, filterBy) => {
   }
 };
 
+
+
+
 const filterBooks = (books, searchQuery) =>
   books.filter(
     o =>
