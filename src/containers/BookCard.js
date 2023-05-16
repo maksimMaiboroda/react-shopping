@@ -7,6 +7,8 @@ const mapStateToProps = ({ cart }, { id }) => ({
     (count, book) => count + (book.id === id ? 1 : 0),
     0
   )
+
+  
 });
 
 export default connect(mapStateToProps, { addToCart, removeFromCart })(
