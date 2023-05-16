@@ -6,7 +6,6 @@ const mapStateToProps = ({ filter }) => ({
   filterBy: filter.filterBy,
   searchQuery: filter.searchQuery
 
-  
 });
 
 export default connect(mapStateToProps, { setFilter, setSearchQuery })(Filter);
